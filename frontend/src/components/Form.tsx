@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+"http://api.weatherapi.com/v1/current.json?key=zzzz&q=London&aqi=no"
+
 const Form = () => {
     //ユーザが入力した都市名を保管する場所をcity
     // データを操作する仕組みがsetCity
