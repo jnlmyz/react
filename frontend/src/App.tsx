@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Title from "./components/Title";
 import Form from "./components/Form";
 import Results from "./components/Results"
@@ -21,7 +21,7 @@ function App() {
       conditionText: "",
       icon: "",
     });
-    const getWeather = (e: any) => {
+    const getWeather = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         fetch(`http://api.weatherapi.com/v1/current.json?key=&q=${city}&aqi=no`)
             .then(res => res.json())
