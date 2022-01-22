@@ -3,7 +3,7 @@ type FormPropsType = {
     getWeather: (e: any) => void
 }
 
-const Form = (props: any) => {
+const Form = (props: FormPropsType) => {
     return (
         <form>
             <input type="text" name="city" placeholder="都市名" onChange={e => props.setCity(e.target.value)}/>
