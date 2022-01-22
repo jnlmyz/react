@@ -16,7 +16,7 @@ function App() {
 
     return (
       <div className="test">
-        <Title cityName={city}/>
+        <Title/>
         <Form setCity={setCity} getWeather={getWeather}/>
         <Results />
       </div>
