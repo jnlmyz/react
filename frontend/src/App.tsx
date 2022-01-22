@@ -26,7 +26,7 @@ function App() {
         fetch(`http://api.weatherapi.com/v1/current.json?key=&q=${city}&aqi=no`)
             .then(res => res.json())
             //dataが分からない
-            .then(data =>
+            .then(data => {
                 setResults({
                   country: data.location.country,
                   cityName: data.location.name,
@@ -34,7 +34,8 @@ function App() {
                   conditionText: data.current.condition.text,
                   icon: data.current.condition.icon
                 })
-              )
+              })
+              .catch(err => alert("エラーが発生しました。ページをリロードして、もう一度トライしてください。"))
     }
 
     return (
