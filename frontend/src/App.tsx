@@ -23,7 +23,7 @@ function App() {
     });
     const getWeather = (e: any) => {
         e.preventDefault();
-        fetch("http://api.weatherapi.com/v1/current.json?key=&q=London&aqi=no")
+        fetch(`http://api.weatherapi.com/v1/current.json?key=&q=${city}&aqi=no`)
             .then(res => res.json())
             //dataが分からない
             .then(data =>
