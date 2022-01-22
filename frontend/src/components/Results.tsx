@@ -8,8 +8,8 @@ type ResultsPropsType = {
     }
 }
 
-const Results = (props: ResultsPropsType) => {
-    const { cityName, country, temperature, conditionText, icon } = props.results;
+const Results = ({ results }: ResultsPropsType) => {
+    const { cityName, country, temperature, conditionText, icon } = results;
     return (
         <div>
             {cityName && <div>{cityName}</div>}
